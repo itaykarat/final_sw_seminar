@@ -3,7 +3,7 @@ import plotly.express as px
 
 
 
-def read_data_as_datafrane(table_path = r'C:\Users\97252\PycharmProjects\final_sw_seminar\GitHub archive tables\pushes__in_all_2023.csv',complexity_score=None,project_id = 27567171398):
+def read_data_as_datafrane(table_path = r'C:/Users/jawad/Downloads/seminar/seminar/seminar/seminar/github_repo_complexity_pipeline-master/GitHub archive tables/pushes__in_all_2023.csv',complexity_score=None,project_id = 27567171398):
     # Read CSV file into a DataFrame
     data_frame = pd.read_csv(table_path)
 
