@@ -7,7 +7,9 @@ class detection_in_image:
 
 
     @staticmethod
-    def detect_random_shaped_in_image(image_path_bpmn = r'C:\Users\97252\PycharmProjects\final_sw_seminar\bpmn_output0.png',show_detection=True):
+    def detect_random_shaped_in_image(image_path_bpmn,show_detection=True):
+
+        print(image_path_bpmn)
         # Read in image
         image = cv2.imread(image_path_bpmn)
 
@@ -36,8 +38,9 @@ class detection_in_image:
         if show_detection:
             # Display the result
             cv2.imshow('Shapes Detected', image)
-            cv2.waitKey(0)
+            # cv2.waitKey(0)
             cv2.destroyAllWindows()
+
         return len(contours) # returns the complexity
 
     @staticmethod
@@ -45,7 +48,7 @@ class detection_in_image:
         gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
         # Apply Gaussian blur
-        # blur = cv2.GaussianBlur(gray, (5, 5), 0)
+        blur = cv2.GaussianBlur(gray, (5, 5), 0)
         blur = gray
 
         # Adaptive threshold
@@ -69,7 +72,7 @@ class detection_in_image:
         # Display image with squares detecte
         if show_detection:
             cv2.imshow('Squares Detected', img)
-            cv2.waitKey(0)
+            # cv2.waitKey(0)
             cv2.destroyAllWindows()
         classes = classes/3
         return classes

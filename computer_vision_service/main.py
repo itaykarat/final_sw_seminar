@@ -1,7 +1,7 @@
 import cv2
 
 # Read in image
-image_path_bpmn = r'/bpmn_output0.png'
+image_path_bpmn = r'C:/Users/jawad/Downloads/seminar/seminar/seminar/seminar/bpmn_output1.png'
 
 image = cv2.imread(image_path_bpmn)
 
@@ -29,5 +29,5 @@ print("Number of shapes detected:", len(contours))
 
 # Display the result
 cv2.imshow('Shapes Detected', image)
-cv2.waitKey(0)
+# cv2.waitKey(0)
 cv2.destroyAllWindows()
